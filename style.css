@@ -401,14 +401,15 @@ p {
 .dropdown-content {
     display: none;
     position: fixed;
-    width: 8.2%;
+    right: 0;
+    width: 8.7%;
 
     background-color: rgb(100, 100, 100, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);  
     border-radius: 10px;
 
     font-family: handWritten;
-    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .dropdown-content a {
