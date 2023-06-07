@@ -1,0 +1,428 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+
+
+/* big left-hand side column */
+.column {
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    background-size: 100%;
+    color: #f1f1f1;
+}  
+
+.toDoListBox {
+    position: fixed;
+    text-align: center;
+    width: 22.5%;
+    height: auto;
+    max-height: 31.4%;
+
+    background-color: rgb(46, 46, 46, 0.45);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    top: 6.2%;
+
+    transition: 0.3s;
+}
+
+.ambientNoiseBox {
+    position: fixed;
+    text-align: center;
+    bottom: 0.1%;
+    width: 22.5%;
+    height: 32.2%;
+
+    background-color: rgb(46, 46, 46, 0.45);
+    color: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+    transition: 0.3s;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: handWritten;
+    margin-bottom: 10px;
+    font-size: 200%;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-family: handWritten;
+}
+
+@font-face {
+    font-family: 'handWritten';
+    src: url(fonts/BryndanWriteBook-nGPM.ttf);
+}
+
+
+
+/*TO DO LIST*/
+#newTaskInput {
+	flex: 1 1 0%;
+	padding: 100%;
+	border-radius: 100%;
+	margin-right: 100%;
+	font-size: 125%;
+}
+
+.list input, .list button, #toDoForm input {
+    margin: 8px;
+    position: relative;
+    padding: 5px;
+    font-family: handWritten;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.todoList{
+    height: auto;
+    margin-top: 5px;
+    max-height: 180px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* set width of to-do list scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* style track of the scrollbar */ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+    border-radius: 10px;
+}
+   
+/* styling of the scrollbar itself */
+::-webkit-scrollbar-thumb {
+    background: rgb(155, 155, 155); 
+    border-radius: 10px;
+}
+  
+/* scrollbar style when mouse hovers over it */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(75, 75, 75);
+    border-radius: 10px; 
+}
+
+.task .content {
+	flex: 1 1 0%;
+}
+
+.task .actions button {
+	cursor: pointer;
+	font-size: 112.5%;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.actions button:hover, #toDoForm #addTaskBtn:hover {
+	opacity: 0.8;
+    cursor: pointer;
+    background-color: #ffffff15;
+    border-radius: 10px;
+}
+
+.actions button:active, #toDoForm #addTaskBtn:active {
+	opacity: 0.6;
+    cursor: pointer;
+    background-color: #ffffff15;
+    border-radius: 10px;
+}
+
+.todo-item .actions {
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+
+
+/*NOISES*/
+.ambientNoiseBox h1 {
+    margin-top: 20px;
+}
+
+.audioContainer {
+    -webkit-appearance: none;
+    -webkit-transition: .2s;
+    opacity: 0.8;
+    transition: opacity.2s;
+    appearance: none;
+    position: relative;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    flex-direction: column;
+}
+
+.noiseNames {
+    margin: 0px -30px 7px 7px;
+    width: 50%;
+    font-size: 130%;
+}
+
+.noiseElements {
+    display: flex;                  
+    flex-direction: row;            
+    flex-wrap: nowrap;              
+    justify-content: space-between; 
+}
+
+.audioCtrlBtns {
+    margin: 5px;
+    position: relative;
+    padding: 5px;
+    font-family: handWritten;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 15%;
+    font-size: 110%;
+}
+
+.audioCtrlBtns:hover {
+    background-color: #ffffff15;
+    border-radius: 10px;
+}
+
+.audioCtrlContainer {
+    width: 100%;  
+}
+
+.audioContainer input {
+    margin: 3px 14px 25px 0px;
+    width: 75%;
+}
+
+
+
+/* hide show div stuff */
+.psuedoCol {
+    position: fixed;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    background-size: 100%;
+    color: #f1f1f1;
+    width: 25%;
+    height: 100%;
+    padding: 15px;
+}
+
+.showButton {
+    font-family: handWritten;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 100, 100, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border: none;
+
+    margin: 3px;
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 15%;
+}
+
+.showButton:hover {
+    background-color: rgba(100, 100, 100, 0.082);
+    border-radius: 10px;
+}
+
+
+
+/* countdown timer */
+.timerBox {
+	padding: 10px 20px 0px 20px;
+	width: 20.5%;
+    height: 18%;
+	background-color: rgb(46, 46, 46, 0.45);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: #ffffff;
+
+    position: fixed;
+    text-align: center;
+    float: center;
+    border-radius: 10px;
+    overflow: hidden;
+
+    top: 42.4%;
+    margin: 15px;
+
+    transition: 0.3s;
+}
+
+.timerBox h1 {
+    padding-bottom: 6px;
+    margin-top: 6px;
+}
+
+.timer {
+    font-family: handWritten;
+    color: #ffffff;
+    background-color: #6d7678;
+    border: 2px dotted black;
+    padding: 10px;
+    height: 23%;
+}
+
+.timer label {
+    font-size: 130%;
+}
+
+.timer input {
+	width: 50px;
+    margin: 5px;
+    padding: 5px;
+    font-family: handWritten;
+    border-radius: 7px;
+    font-size: 100%;
+}
+
+#startTimerBtn {
+    margin: 5px;
+    position: relative;
+    padding: 5px;
+    font-family: handWritten;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 110%;
+}
+
+#startTimerBtn:hover {
+    background-color: #ffffff15;
+    border-radius: 10px;
+}
+
+#startTimerBtn:active {
+    background-color: rgb(75, 75, 75);
+}
+
+#countdownClock {
+    font-size: 200%;
+    font-family: handWritten;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+
+
+/* background video */
+.bgVideo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bgVideo video {
+    /* Make video at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+  
+    /* Prevent stretching or squishing of the video */
+    width: auto;
+    height: auto;
+  
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* dropdown menu */
+.dropdown {
+    float: right;
+}
+
+/* styles the "pick a city" button */
+.dropbtn {
+    background-color: rgba(100, 100, 100, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border: none;
+    color: white;
+
+    padding: 10px;
+    border-radius: 7px;
+    margin: 15px;
+
+    cursor: pointer;
+
+    font-size: 200%;
+    font-family: handWritten;
+}
+
+/* div containing city names */
+.dropdown-content {
+    display: none;
+    position: fixed;
+    width: 8.2%;
+
+    background-color: rgb(100, 100, 100, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);  
+    border-radius: 10px;
+
+    font-family: handWritten;
+    margin-left: 15px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

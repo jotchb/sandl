@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        SANDL
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+</head>
+
+<body>
+    <main>
+
+    <div class="psuedoCol">
+
+        <button class="showButton" onclick="hideColumn(); changeTxt()" id="hideButton">Hide</button>
+
+        <div class="column" id="column">
+
+            
+            
+            <div class="toDoListBox grid" id="toDoListBox">
+
+                <h1>To Do</h1>
+
+                <form id="toDoForm">
+                    <input 
+                        type="text" 
+                        placeholder="Task Here..."
+                        name="content"
+                        id="content" />
+                            
+
+                    <input type="submit" value="Add to do" id="addTaskBtn" />
+                </form>
+                <!-- End of New Todo -->
+
+                <!-- Todo List -->
+                <section class="todoList">
+                    <div class="list" id="todoList"></div>
+                </section>
+                <!-- End of Todo List -->
+
+            </div>
+
+
+
+            <!-- countdown timer -->
+            <div class="timerBox" id="timerBox">
+
+                <h1>Countdown Timer</h1>
+
+                <div class="timer">
+
+                    <label>Hours: </label>
+                    <input id="hours" type="number" min="0" max="24" placeholder="0">
+
+                    <label>Minutes: </label>
+                    <input id="minutes" type="number" min="0" max="59" placeholder="0">
+
+                    <button id="startTimerBtn" onclick="startTimer()">Start</button>
+
+                </div>
+
+                <audio id="timerBuzzer" src="audios/buzzerSound.mp3"></audio>
+            
+                <div id="countdownClock">00:00:00</div>
+                
+            </div>
+
+
+            
+            <div class="ambientNoiseBox" id="ambientNoiseBox">
+
+                <h1>Ambient Noise</h1>
+
+                <div class="audioCtrlContainer">
+                    <button class="audioCtrlBtns" onclick="playAudio();">Play</button>
+                    <button class="audioCtrlBtns" onclick="pauseAudio();">Pause</button>
+                </div>
+                
+                <div class="noiseElements">
+
+                    <div class="noiseNames">
+
+                        <p>Rain</p>
+                        <p>Coffee Shop</p>
+                        <p>Waves</p>
+                        <p>Fire</p>
+
+                    </div>
+                        
+                    <div class="audioContainer">
+
+                        <div class="rainNoise">
+                            <audio id="rain" loop preload=”metadata”>  
+                            <source src="audios/rain.mp3" type="audio/mp3">
+                            </audio>
+                            <input type="range" id="rainSlider" min="0" max="100" value="0">
+                        </div>
+
+                        <div class="coffeeNoise">
+                            <audio id="coffee" loop preload=”metadata”>  
+                            <source src="audios/coffee.mp3" type="audio/mp3">
+                            </audio>
+                            <input type="range" id="coffeeSlider" min="0" max="100" value="0">
+                        </div>
+
+                        <div class="wavesNoise">
+                            <audio id="waves" loop preload=”metadata”>  
+                            <source src="audios/waves.mp3" type="audio/mp3">
+                            </audio>
+                            <input type="range" id="wavesSlider" min="0" max="100" value="0">
+                        </div>
+
+                        <div class="fireNoise">
+                            <audio id="fire" loop preload=”metadata”>  
+                            <source src="audios/fire.mp3" type="audio/mp3">
+                            </audio>
+                            <input type="range" id="fireSlider" min="0" max="100" value="0">
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+
+        </div>
+        
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Pick a city</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="changeVideo('videos/amsterdamFinal.mp4')">Amsterdam</a>
+          <a href="#" id="NYBtn" onclick="changeVideo('videos/newYorkFinal.mp4')">New York</a>
+          <a href="#" id="NorwayBtn" onclick="changeVideo('videos/norwayFinal.mp4')">Norway</a>
+          <a href="#" onclick="changeVideo('videos/switzerlandFinal.mp4')">Switzerland</a>
+        </div>
+    </div>
+
+    <!-- background video-->
+    <div class="bgVideo">
+        <video id="video-player" autoplay muted loop>
+            <source id="video-source" src="videos/amsterdamFinal.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
