@@ -20,5 +20,5 @@ Lock-in and focus on the task at hand. This web-app is oriented around customizi
 
 - Kennan Lu (Developer)
 - Midhusi Keran (Developer)
-- Mohammed Fadul (Developer)
+- Mohamed Fadul (Developer)
 - Joshua Burgos (Developer)
