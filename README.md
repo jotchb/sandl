@@ -16,7 +16,7 @@ Lock-in and focus on the task at hand. This web-app is oriented around customizi
 - Switch the scenery by clicking the top right button. Then, from the dropdown, select the city you want to see.
 - Hide the UI elements by clicking the hide button at the top left. To show the UI elements again, simply click the button again (it is now titled 'show')
 
-## Creds
+## Credits
 
 - Kennan Lu (Developer)
 - Midhusi Keran (Developer)
