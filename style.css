@@ -303,10 +303,11 @@ p {
     border: 2px dotted black;
     padding: 10px;
     height: 23%;
+    overflow: hidden;
 }
 
 .timer label {
-    font-size: 130%;
+    font-size: 125%;
 }
 
 .timer input {
